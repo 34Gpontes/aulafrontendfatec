@@ -1,17 +1,18 @@
+import React from 'react';
+import { BrowserRouter, Route, Routes, Switch } from 'react-router-dom';
+import Home from './components/home/Home';
+import BarraMenu from './components/menu/BarraMenu';
+import './'
 
 function App() {
-  return (
-    <div class="centraliza" >
-      <div style={{height: "8rem"}}>
-        React
-      </div>
-      <div style={{height: "8rem"}}>
-        React 2
-      </div>
-    </div>
-
-
-  );
+    return (
+        <BrowserRouter>
+            <BarraMenu />
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;
